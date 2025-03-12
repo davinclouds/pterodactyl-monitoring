@@ -1,0 +1,37 @@
+# HTML Template (index.html)
+index_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Monitoring</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .status { font-size: 24px; font-weight: bold; }
+        .online { color: green; }
+        .offline { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Server Monitoring</h1>
+    {% if data %}
+        <p class="status {{ 'online' if data['status'] == 'RUNNING' else 'offline' }}">
+            Server Status: {{ data['status'] }}
+        </p>
+        <p>CPU Usage: {{ data['cpu'] }}</p>
+        <p>RAM Usage: {{ data['ram'] }}</p>
+        <p>Disk Usage: {{ data['disk'] }}</p>
+    {% else %}
+        <p class="status offline">Failed to fetch server status</p>
+    {% endif %}
+</body>
+</html>
+"""
+
+# Save HTML file
+def save_html():
+    with open("index.html", "w") as f:
+        f.write(index_html)
+
+save_html()
