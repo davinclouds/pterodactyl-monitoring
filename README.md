@@ -9,16 +9,16 @@
 ✅ Notifikasi otomatis ke **Telegram** jika server down  
 ✅ UI sederhana berbasis **HTML + Flask**  
 
-## 💻 Teknologi
+## 💻 Language
 - Python (Flask)
 - Pterodactyl API
 - Telegram Bot API
 
-## 📌 Cara Penggunaan
+## 📌 How To Use?
 
 ### 1️⃣ Clone Repository & Masuk ke Folder
 ```bash
-git clone https://github.com/username/pterodactyl-monitoring.git
+git clone https://github.com/davinclouds/pterodactyl-monitoring.git
 cd pterodactyl-monitoring
 ```
 
